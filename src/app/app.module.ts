@@ -8,7 +8,6 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { StudentinscriptionPage } from '../pages/studentinscription/studentinscription';
 import { CompanyinscriptionPage } from '../pages/companyinscription/companyinscription';
-import { LoginPage } from '../pages/login/login';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { StudentPage } from '../pages/student/student';
@@ -28,8 +27,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CompanyinscriptionPage,
     StudentPage,
     CompanyPage,
-    LoginPage,
-
     TabsPage
   ],
   imports: [
@@ -42,13 +39,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-
     StudentPage,
     CompanyPage,
     StudentinscriptionPage,
     CompanyinscriptionPage,
-
-    LoginPage,
     TabsPage
   ],
   providers: [
