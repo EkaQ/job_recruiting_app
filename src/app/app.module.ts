@@ -12,6 +12,7 @@ import { CompanyinscriptionPage } from '../pages/companyinscription/companyinscr
 import { TabsPage } from '../pages/tabs/tabs';
 import { StudentPage } from '../pages/student/student';
 import { CompanyPage } from '../pages/company/company';
+import { DatesPage} from '../pages/dates/dates';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -27,6 +28,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CompanyinscriptionPage,
     StudentPage,
     CompanyPage,
+    DatesPage,
     TabsPage
   ],
   imports: [
@@ -43,6 +45,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CompanyPage,
     StudentinscriptionPage,
     CompanyinscriptionPage,
+    DatesPage,
     TabsPage
   ],
   providers: [
