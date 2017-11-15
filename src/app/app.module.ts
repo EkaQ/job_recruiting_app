@@ -29,6 +29,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StudentPage,
     CompanyPage,
     LoginPage,
+
     TabsPage
   ],
   imports: [
@@ -41,10 +42,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    StudentinscriptionPage,
-    CompanyinscriptionPage,
+
     StudentPage,
     CompanyPage,
+    StudentinscriptionPage,
+    CompanyinscriptionPage,
+
     LoginPage,
     TabsPage
   ],
