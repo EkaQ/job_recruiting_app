@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+/*import {Http} from '@angular/http';*/
 /**
  * Generated class for the StudentPage page.
  *
@@ -14,8 +14,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'student.html',
 })
 export class StudentPage {
+  /*endpoint;
+  api_posts;*/
+  constructor(public navCtrl: NavController, public navParams: NavParams, /*private http:Http*/) {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    /*endpoint: any = 'https://jsonplaceholder.typicode.com';
+    api_posts: any = '/posts/1';
+    this.http.get(this.endpoint + this.api_posts)
+      .subscribe(res => this.data = res.json());*/
   }
 
 

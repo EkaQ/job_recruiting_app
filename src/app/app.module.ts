@@ -1,5 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+/*import { Http }      from '@angular/http';*/
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
@@ -10,7 +11,7 @@ import { StudentinscriptionPage } from '../pages/studentinscription/studentinscr
 import { CompanyinscriptionPage } from '../pages/companyinscription/companyinscription';
 
 import { TabsPage } from '../pages/tabs/tabs';
-import { StudentPage } from '../pages/student/student';
+import { StudentPage } from '../pages/student/student'; 
 import { CompanyPage } from '../pages/company/company';
 
 
