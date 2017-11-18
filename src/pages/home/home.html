@@ -5,18 +5,9 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label floating>E-mail</ion-label>
-      <ion-input type="email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Mot de passe </ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-    <button ion-button>Se connecter</button>
-    <button ion-button outline (click)="changePage()">Inscription étudiant</button>
-    <button ion-button outline (click)="changePageComp()">Inscription entreprise</button>
-
-  </ion-list>
+    <div id="btn_container">
+      <button ion-button class="classic_btn" outline (click)="changePage()">Inscription étudiant</button>
+      <button ion-button class="classic_btn" outline (click)="changePageComp()">Inscription entreprise</button>
+      <button ion-button class="classic_btn" (click)="disconnect()">Deconnexion</button>
+    </div>
 </ion-content>

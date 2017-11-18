@@ -16,8 +16,18 @@
 <ion-content padding>
   <ion-item>
     <ion-label floating>Journée job dating</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="event.nom"></ion-input>
   </ion-item>
-  <button ion-button>Add</button>
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)]="event.start_date"></ion-datetime>
+  </ion-item>
+  <div id="btn_container">
+    <button ion-button class="classic_btn" (click)="addDate()">+ Ajouter une journée</button>
+  </div>
 
-</ion-content>
+  <ion-list>
+    <div style="width: 100%; margin: 5px 0" *ngFor="let date of dateService.getDates()">
+      <button ion-button outline>{{ date.nom + ' ' + date.start_date}}</button><button ion-button style="float: right; background-color: red;"><ion-icon name="close" (click)="dateService.removeDate(date)"></ion-icon></button>
+    </div>
+  </ion-list>

@@ -11,13 +11,18 @@ import { StudentinscriptionPage } from '../pages/studentinscription/studentinscr
 import { CompanyinscriptionPage } from '../pages/companyinscription/companyinscription';
 
 import { TabsPage } from '../pages/tabs/tabs';
-import { StudentPage } from '../pages/student/student'; 
+import { StudentPage } from '../pages/student/student';
 import { CompanyPage } from '../pages/company/company';
 import { DatesPage} from '../pages/dates/dates';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HttpModule } from "@angular/http";
+import {LoginPage} from "../pages/login/login";
+import {StudentService} from "../services/students";
+import {DateService} from "../services/date";
+import {CompanyService} from "../services/company";
 
 @NgModule({
   declarations: [
@@ -30,10 +35,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StudentPage,
     CompanyPage,
     DatesPage,
-    TabsPage
+    TabsPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -47,11 +54,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StudentinscriptionPage,
     CompanyinscriptionPage,
     DatesPage,
-    TabsPage
+    TabsPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    StudentService,
+    DateService,
+    CompanyService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

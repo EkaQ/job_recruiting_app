@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {DateService} from "../../services/date";
 
 /**
  * Generated class for the DatesPage page.
@@ -15,7 +16,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DatesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  dateService : DateService;
+  event: any = {};
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, dateService: DateService) {
+    this.dateService = dateService;
+  }
+
+  addDate() {
+    console.log(this.event);
+    let date = {nom: this.event.nom, start_date: this.event.start_date};
+    this.dateService.addDate(date);
   }
 
   ionViewDidLoad() {

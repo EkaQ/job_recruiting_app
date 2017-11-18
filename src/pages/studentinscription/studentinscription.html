@@ -14,7 +14,27 @@
 
 
 <ion-content padding>
-  <ion-list>
+
+  <form [formGroup]="studentForm" (submit)="saveStudent()">
+    <ion-item>
+      <ion-label for="nom" floating>Nom</ion-label>
+      <ion-input formControlName="nom" id="nom" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label for="prenom" floating>Prenom</ion-label>
+      <ion-input formControlName="prenom" id="prenom" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label for="email" floating>Email</ion-label>
+      <ion-input formControlName="email" id="email" type="text"></ion-input>
+    </ion-item>
+
+    <button ion-button class="classic_btn" type="submit" [disabled]="!studentForm.valid" style="width : 100%; margin: 0; margin-top: 20px">S'inscrire</button>
+  </form>
+
+  <!--<ion-list>
 
     <ion-item>
       <ion-label floating>Nom</ion-label>
@@ -53,8 +73,9 @@
         <ion-option value="reseaux">Réseaux</ion-option>
       </ion-select>
     </ion-item>
-    <button ion-button>S'inscrire</button>
+    <div id="btn_container">
+      <button ion-button class="classic_btn">S'inscrire</button>
+    </div>
 
-
-  </ion-list>
+  </ion-list> -->
 </ion-content>

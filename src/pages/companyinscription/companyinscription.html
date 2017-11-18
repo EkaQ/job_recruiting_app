@@ -14,38 +14,23 @@
 
 
 <ion-content padding>
-  <ion-list>
-
+  <form [formGroup]="companyForm" (submit)="saveCompany()">
     <ion-item>
-      <ion-label floating>Nom de l'entreprise</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Mot de passe</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Adresse</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-label for="nom" floating>Nom</ion-label>
+      <ion-input formControlName="nom" id="nom" type="text"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label floating>E-mail</ion-label>
-      <ion-input type="email"></ion-input>
+      <ion-label for="adresse" floating>Adresse</ion-label>
+      <ion-input formControlName="adresse" id="adresse" type="text"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label>Profil Recherché</ion-label>
-      <ion-select [(ngModel)]="profil">
-        <ion-option value="integrateur">Intégrateur</ion-option>
-        <ion-option value="master">Front-End</ion-option>
-        <ion-option value="back">Back-End</ion-option>
-        <ion-option value="reseaux">Réseaux</ion-option>
-      </ion-select>
+      <ion-label for="email" floating>Email</ion-label>
+      <ion-input formControlName="email" id="email" type="text"></ion-input>
     </ion-item>
-    <button ion-button>S'inscrire</button>
 
+    <button ion-button class="classic_btn" type="submit" [disabled]="!companyForm.valid" style="width : 100%; margin: 0; margin-top: 20px">S'inscrire</button>
+  </form>
 
-
-  </ion-list>
 </ion-content>

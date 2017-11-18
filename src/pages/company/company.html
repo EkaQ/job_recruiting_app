@@ -9,27 +9,10 @@
 </ion-header>
 
 <ion-content padding>
-   <table class="table">
-       <thead>
-           <tr>
-               <th scope="col">#</th>
-               <th scope="col">Nom de l'entreprise</th>
-               <th scope="col">Adresse</th>
-               <th scope="col">E-mail</th>
-               <th scope="col">Profil recherché</th>
-           </tr>
-       </thead>
-       <tbody>
-           <tr>
-               <th scope="row">1</th>
-               <td>test</td>
-               <td>test</td>
-               <td>test</td>
-               <td>test</td>
-               <input type="checkbox" aria-label="Text input with radio button">
-           </tr>
-       </tbody>
-
-   </table>
+  <ion-list>
+    <div style="width: 100%; margin: 5px 0" *ngFor="let company of companyService.getCompanies()">
+      <button ion-button outline (click)="itemSelected(company)">{{ company.nom }}</button><button ion-button style="float: right; background-color: red;"><ion-icon name="close" (click)="companyService.removeCompany(company)"></ion-icon></button>
+    </div>
+  </ion-list>
 
 </ion-content>

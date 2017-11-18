@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { StudentinscriptionPage } from '../studentinscription/studentinscription';
+/*import { StudentinscriptionPage } from '../studentinscription/studentinscription';
 import { CompanyinscriptionPage } from '../companyinscription/companyinscription';
+import {HomePage} from "../home/home";*/
+import {TabsPage} from "../tabs/tabs";
 /**
  * Generated class for the LoginPage page.
  *
@@ -24,11 +26,9 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-  public changePage() {
-    this.nav.push(StudentinscriptionPage);
-  }
-  public changePageComp() {
-    this.nav.push(CompanyinscriptionPage);
+
+  public goToHome() {
+    this.nav.setRoot(TabsPage);
   }
 }
 

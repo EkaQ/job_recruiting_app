@@ -23,9 +23,10 @@
       <ion-label floating>Mot de passe </ion-label>
       <ion-input type="password"></ion-input>
     </ion-item>
-    <button ion-button>Se connecter</button>
-    <button ion-button outline (click)="changePage()">Inscription élève</button>
-    <button ion-button outline (click)="changePageComp()">Inscription entreprise</button>
+
+    <div id="btn_container">
+      <button ion-button class="classic_btn" (click)="goToHome()">Se connecter</button>
+    </div>
 
   </ion-list>
 </ion-content>
